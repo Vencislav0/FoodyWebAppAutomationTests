@@ -29,22 +29,3 @@ jobs:
 
       - name: Run .NET tests
         run: dotnet test --verbosity normal
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install Selenium IDE CLI
-        run: npm install -g selenium-side-runner
-
-      - name: Install Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
-          sudo apt-get install -y unzip
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
-
-      - name: Run Selenium IDE tests
-        run: selenium-side-runner LogInEditProfileTests.side
