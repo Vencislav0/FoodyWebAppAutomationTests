@@ -27,7 +27,9 @@ public class FoodyWebAppTestsTest {
         options.AddArgument("--disable-dev-smh-usage");
         options.AddArgument("--disable-gpu");
 
+
         driver = new ChromeDriver(options);
+        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
     js = (IJavaScriptExecutor)driver;
     vars = new Dictionary<string, object>();
   }
