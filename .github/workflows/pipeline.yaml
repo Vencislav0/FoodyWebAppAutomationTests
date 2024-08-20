@@ -47,4 +47,4 @@ jobs:
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
 
       - name: Run Selenium IDE tests
-        run: selenium-side-runner LogInEditProfileTests.side --headless --no-sandbox --disable-dev-shm-usage --disable-gpu
+        run: selenium-side-runner LogInEditProfileTests.side
