@@ -27,5 +27,16 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
 
-      - name: Run tests
+      - name: Run .NET tests
         run: dotnet test --verbosity normal
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' 
+
+      - name: Install Selenium IDE CLI
+        run: npm install -g selenium-side-runner
+
+      - name: Run Selenium IDE tests
+        run: selenium-side-runner LogInEditProfileTests.side
