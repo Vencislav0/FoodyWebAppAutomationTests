@@ -22,7 +22,7 @@ public class FoodyWebAppTestsTest {
         ChromeOptions options = new ChromeOptions();
         options.AddUserProfilePreference("profile.password_manager_enabled", false);
         options.AddArgument("--disable-search-engine-choice-screen");
-        options.AddArgument("--headless");
+        //options.AddArgument("--headless");
         options.AddArgument("--no-sandbox");
         options.AddArgument("--disable-dev-smh-usage");
         options.AddArgument("--disable-gpu");
