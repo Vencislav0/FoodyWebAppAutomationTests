@@ -1,86 +1,82 @@
-Foody Web App Automation Tests
-This repository contains End-to-End (E2E) automation tests for the Foody Web Application. The tests are designed to cover critical functionalities of the application, ensuring that key user interactions perform as expected.
+# Foody Web App Automation Tests
 
-Overview
-The Foody Web App allows users to manage their food-related activities through various functionalities, such as creating, editing, and deleting items. This test suite automates the verification of these functionalities to ensure the application's reliability and robustness.
+This repository contains End-to-End (E2E) automation tests for the Foody Web Application, developed using C#. The tests cover essential functionalities, ensuring that critical features such as login, creation, editing, and deletion work as intended.
 
-Covered Functionalities
+## Overview
+
+The Foody Web App is a platform that allows users to manage their food-related activities. This test suite automates the verification of key functionalities to ensure that the application is reliable and performs as expected.
+
+## Covered Functionalities
+
 The automation tests focus on the following core functionalities:
 
-Login:
+1. **Login**:
+   - **Objective**: Verify that users can log in with valid credentials.
+   - **Test Scenarios**:
+     - Successful login with correct username and password.
+     - Display of validation messages on login failure with incorrect credentials.
 
-Objective: Ensure that users can log in successfully with valid credentials.
-Test Scenarios:
-Valid login with correct username and password.
-Validation error on login with incorrect credentials.
-Create:
+2. **Create**:
+   - **Objective**: Ensure users can create new items in the application.
+   - **Test Scenarios**:
+     - Creation of a new item with valid input data.
+     - Handling of edge cases, such as creation with missing or invalid data.
 
-Objective: Verify that users can create new entries in the application.
-Test Scenarios:
-Creating a new item with valid data.
-Handling edge cases, such as creating with missing or invalid data.
-Edit:
+3. **Edit**:
+   - **Objective**: Verify that users can edit existing items.
+   - **Test Scenarios**:
+     - Successful editing of an existing item with valid changes.
+     - Validation that changes are correctly saved and displayed.
 
-Objective: Ensure that users can edit existing entries.
-Test Scenarios:
-Editing an existing item with valid changes.
-Validating that changes are correctly saved and reflected.
-Delete:
+4. **Delete**:
+   - **Objective**: Confirm that users can delete items.
+   - **Test Scenarios**:
+     - Successful deletion of an item and verification that it is removed from the list.
+     - Handling cases where the item no longer exists or the deletion is canceled.
 
-Objective: Confirm that users can delete existing entries.
-Test Scenarios:
-Deleting an item and verifying it is removed from the list.
-Ensuring the system handles cases where the item no longer exists or the deletion is canceled.
-Technology Stack
-Testing Framework: NUnit, xUnit, or MSTest (choose based on your actual implementation)
-Programming Language: C#
-CI/CD Integration: GitHub Actions (if applicable)
-Prerequisites
-Visual Studio (2019 or later recommended)
-.NET SDK (compatible version with your project)
-Git
-Installation and Setup
-Clone the repository:
+## Technology Stack
 
-bash
-Copy code
-git clone https://github.com/Vencislav0/FoodyWebAppAutomationTests.git
-Open the solution in Visual Studio:
+- **Programming Language**: C#
+- **Testing Framework**: [NUnit](https://nunit.org/), [xUnit](https://xunit.net/), or [MSTest](https://docs.microsoft.com/en-us/dotnet/core/testing/) (choose based on your actual implementation)
+- **Package Manager**: NuGet
 
-Navigate to the project directory and open the .sln file.
-Restore NuGet packages:
+## Prerequisites
 
-Visual Studio will automatically restore NuGet packages upon opening the solution. If not, you can manually restore them by right-clicking on the solution in the Solution Explorer and selecting Restore NuGet Packages.
-Build the solution:
+- Visual Studio (2019 or later recommended)
+- .NET SDK (compatible version with your project)
+- Git
 
-Build the solution to ensure all dependencies are correctly installed and the project is configured properly.
-Running the Tests
+## Installation and Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Vencislav0/FoodyWebAppAutomationTests.git
+3. Restore NuGet packages:
+   - Visual Studio will automatically restore NuGet packages upon opening the solution. If not, you can manually restore them by right-clicking on the solution in the **Solution Explorer** and selecting **Restore NuGet Packages**.
+
+4. Build the solution:
+   - Build the solution to ensure all dependencies are correctly installed and the project is configured properly.
+
+## Running the Tests
+
 To run the tests, follow these steps:
 
-Open the Test Explorer in Visual Studio by navigating to Test > Test Explorer.
-Click Run All to execute all tests in the suite.
+1. Open the **Test Explorer** in Visual Studio by navigating to **Test** > **Test Explorer**.
+2. Click **Run All** to execute all tests in the suite.
+
 Alternatively, you can run tests using the command line:
 
-bash
-Copy code
-dotnet test
-This command will run all the tests in the solution and output the results to the console.
+    ```bash
+    dotnet test
 
-Test Structure
-The tests are organized into the following directories:
+## Continuous Integration
 
-/Tests: Contains all test files, organized by feature (e.g., LoginTests.cs, CreateTests.cs).
-/Fixtures: Holds any mock data or JSON files used to simulate API responses or input data.
-/Helpers: Contains utility classes and methods that support test operations.
-Continuous Integration
 The project can be integrated with a Continuous Integration (CI) system such as GitHub Actions, Azure DevOps, or Jenkins to automatically run the test suite on every push or pull request.
 
-Reporting
+## Reporting
+
 Test results are available in the Test Explorer in Visual Studio. For more detailed reporting, you can configure output formats using extensions or built-in features within the chosen testing framework (e.g., NUnit, xUnit, MSTest).
 
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 
